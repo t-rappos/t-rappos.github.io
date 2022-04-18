@@ -40,6 +40,10 @@ function App() {
           <Section text={"RSVP HERE:     " + words} id="section-e" isLeft={true} textBelow={false}>
           <img width={800} height={800} />
           </Section>
+
+          <Section text={""} id="section-f" isLeft={false} textBelow={false}>
+            <div style={{paddingBottom: "600px"}}></div>
+          </Section>
         </div>
       </div>
     </div>

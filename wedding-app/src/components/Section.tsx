@@ -11,11 +11,17 @@ interface ButtonDef{
     text: string
 }
 
-const ScrollTo = (id: string) => {
+const ScrollTo = (id: string, offset: number) => {
+    console.log(id, offset);
     const section = document.querySelector( '#'+id );
-    //console.log(section);
-    if(section)
-        section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+    
+
+    if(section){
+        const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+        //section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+    }
+        
 }
 
 
@@ -24,8 +30,17 @@ interface Props2{
 }
 
 const ScrollButtons = (props: Props2) => {
-    
+    const [height, setHeight] = useState(0)
+    const ref = useRef<HTMLDivElement>(null)
     const [active, setActive] = useState("index");
+
+    useEffect(() => {
+        if(ref?.current != null){
+            console.log("ref",ref);
+            setHeight(ref.current.clientHeight)
+        }
+    })
+    
 
     useEffect(() => {
         const onScroll = (_e: any) => {
@@ -54,65 +69,20 @@ const ScrollButtons = (props: Props2) => {
 
     return (
         <> 
-            <div style={{position: "fixed", top: "1vh", left: "0", width: "100%"}}>
+            <div ref={ref} style={{position: "fixed", top: "1vh", left: "0", width: "100%"}}>
            
                 {
                     props.buttons.map( (x,i) => {
                         return (<button
                         style={{padding: "min(2vw, 20px)", marginLeft: i==0?"":"min(2vw, 30px)", fontSize: "min(3vw, 30px)", fontWeight: x.id == active ? "bold" : "normal"}}
                          key={x.id} 
-                         onClick={()=>{ScrollTo(x.id);}}>
+                         onClick={()=>{ScrollTo(x.id, height);}}>
                              {x.text}
                         </button>)
                     })
                 }
 
             </div>
-        </>
-     )
-}
-
-const ScrollContainer = (_props: props) => {
-    const myRef1 = useRef<HTMLDivElement>(null)
-    const myRef2 = useRef<HTMLDivElement>(null)
-    const myRef3 = useRef<HTMLDivElement>(null)
-    const myRef4 = useRef<HTMLDivElement>(null)
-    const myRef5 = useRef<HTMLDivElement>(null)
-    const myRef6 = useRef<HTMLDivElement>(null)
-    const myRef7 = useRef<HTMLDivElement>(null)
-    const myRef8 = useRef<HTMLDivElement>(null)
-    const myRef9 = useRef<HTMLDivElement>(null)
-    const myRef10 = useRef<HTMLDivElement>(null)
-
-    const refs = [myRef1, myRef2, myRef3,
-        myRef4,
-        myRef5,
-        myRef6,
-        myRef7,
-        myRef8,
-        myRef9,
-        myRef10];
-
-    const executeScroll = (index: number) => {if(refs[index]?.current != null) refs[index]?.current?.scrollIntoView({behavior: "smooth"});    }
-  
-
-    return (
-        <> {/*
-            <div style={{position: "fixed", top: "0", left: "0"}}>
-                {props.buttonLabel.forEach((x, index) => {
-                    <button onClick={executeScroll.b}>{props.buttonLabel[index]}</button> 
-                })}
-                
-                <button onClick={executeScroll2}>{props.buttonLabel[1]}</button> 
-                <button onClick={executeScroll3}>{props.buttonLabel[2]}</button> 
-                <button onClick={executeScroll4}>{props.buttonLabel[3]}</button> 
-            </div>
-           <div ref={myRef1}>{props.element[0]}</div> 
-           <div ref={myRef2}>{props.element[1]}</div> 
-           <div ref={myRef3}>{props.element[2]}</div> 
-           <div ref={myRef4}>{props.element[3]}</div> 
-            */
-            }
         </>
      )
 }
@@ -148,7 +118,6 @@ function Section(props: React.PropsWithChildren<MyProps>) {
 
 export {
     Section,
-    ScrollContainer,
     ScrollButtons,
 };
 
