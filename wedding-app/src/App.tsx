@@ -1,5 +1,7 @@
 import React from 'react';
-import { Section, ScrollButtons } from './components/Section';
+
+import NavBar from './components/NavBar';
+import Section from './components/Section';
 
 import logo from './logo.svg';
 import './App.css';
@@ -10,8 +12,8 @@ function App() {
   return (
     <div className="App" style={{width: "100%"}}>
       <div style={{ maxWidth: "800px", display: "flex",  alignSelf: "center", justifySelf: "center"}}>
-        <ScrollButtons
-          buttons={[{id: "section-a", text: "Us"},
+        <NavBar
+          links={[{id: "section-a", text: "Us"},
            {id: "section-b", text: "Ceremony"},
            {id: "section-c", text: "Reception"},
            {id: "section-d", text: "Gifts"},
