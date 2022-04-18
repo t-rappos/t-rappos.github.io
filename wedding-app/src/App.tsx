@@ -19,16 +19,27 @@ function App() {
           ]}
         />
         
-        <div style={{marginTop: "30px"}}>
+        <div style={{marginTop: "7vh"}}>
+         
+          <Section text={"About us: " + words} id="section-a" isLeft={true} textBelow={true}>
+            <img width={800} height={800} />
+          </Section>
+
+          <Section text={"About the ceremony:    " + words} id="section-b" isLeft={false} textBelow={false}>
+            <img width={800} height={800} />
+          </Section>
+          
+          <Section text={"About the reception:    " + words} id="section-c" isLeft={true} textBelow={false}>
           <img width={800} height={800} />
-          <Section text={"About us: " + words} id="section-a" isLeft={true}/>
-          <Section text={"About the ceremony:    " + words} id="section-b" isLeft={false}/>
+          </Section>
+
+          <Section text={"About the gifts:    " + words} id="section-d" isLeft={false} textBelow={false}>
           <img width={800} height={800} />
-          <Section text={"About the reception:    " + words} id="section-c" isLeft={true}/>
+          </Section>
+
+          <Section text={"RSVP HERE:     " + words} id="section-e" isLeft={true} textBelow={false}>
           <img width={800} height={800} />
-          <Section text={"About the gifts:    " + words} id="section-d" isLeft={false}/>
-          <Section text={"RSVP HERE:     " + words} id="section-e" isLeft={true}/>
-          <img width={800} height={800} />
+          </Section>
         </div>
       </div>
     </div>
