@@ -69,7 +69,7 @@ export default (props: NavBarProps) => {
                     props.links.map( (x,i) => {
                         return (<span
                          className="noselect"
-                         style={{padding: "min(2vw, 20px)", marginLeft: i==0?"":"min(2vw, 30px)", fontSize: "min(3vw, 30px)", fontWeight: x.id == active ? "bold" : "normal"}}
+                         style={{padding: "min(2vw, 20px)", marginLeft: i==0?"":"min(2vw, 30px)", fontSize: "min(3vw, 30px)", fontWeight: x.id == active ? "bold" : "normal", cursor: "pointer"}}
                          key={x.id} 
                          onClick={()=>{ScrollTo(x.id, height);}}>
                              {x.text}
