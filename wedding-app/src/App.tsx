@@ -3,6 +3,13 @@ import { Desktop, Mobile, NotMobile, Tablet } from './components/Responsive';
 import NavBar from './components/NavBar';
 import Section from './components/Section';
 import './App.css';
+import { Gradient } from "./gradient"
+
+setTimeout(()=>{
+const gradient = new Gradient();
+gradient.initGradient("#gradient-canvas");
+
+}, 1000);
 
 const words = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
@@ -52,11 +59,14 @@ const content = (<>
   </Section>
 </>);
 
+const background = (<canvas id="gradient-canvas"></canvas>);
+
 function App() {
   return (
     <>
       <Mobile>
         <div className="App">
+          {background}
           {navbar}
           <div>Mobile</div>
           {content}
@@ -64,7 +74,7 @@ function App() {
       </Mobile>
       <NotMobile>
         <div className="App" style={{ width: "100%" }}>
-         
+          {background}
           <div style={{ maxWidth: "800px", display: "flex", alignSelf: "center", justifySelf: "center" }}>
             <div>Not Mobile</div>
             {navbar}
