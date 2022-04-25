@@ -63,7 +63,7 @@ export default (props: NavBarProps) => {
 
     return (
         <> 
-            <div ref={ref} style={{position: "fixed", boxShadow: "0 3px 11px 0px #f2f2f2",  left: "0", width: "100%", padding: "10px", background: "white"}}>
+            <div ref={ref} style={{position: "fixed", boxShadow: "0 3px 11px 0px #f2f2f2",  left: "0", width: "100%", padding: "10px", background: "#ffffffe6"}}>
            
                 {
                     props.links.map( (x,i) => {

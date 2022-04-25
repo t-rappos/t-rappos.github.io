@@ -1,4 +1,8 @@
 // @ts-nocheck 
+/* eslint no-unused-expressions: 0 */
+/* eslint no-restricted-globals: 0 */
+/* eslint no-undef: 0 */
+
 
 /*
 *   Stripe WebGl Gradient Animation
