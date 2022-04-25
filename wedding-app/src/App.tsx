@@ -10,19 +10,19 @@ const words = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 
 function App() {
   return (
-    <div className="App" style={{width: "100%"}}>
-      <div style={{ maxWidth: "800px", display: "flex",  alignSelf: "center", justifySelf: "center"}}>
+    <div className="App" style={{ width: "100%" }}>
+      <div style={{ maxWidth: "800px", display: "flex", alignSelf: "center", justifySelf: "center" }}>
         <NavBar
-          links={[{id: "section-a", text: "Us"},
-           {id: "section-b", text: "Ceremony"},
-           {id: "section-c", text: "Reception"},
-           {id: "section-d", text: "Gifts"},
-           {id: "section-e", text: "RSVP"}
+          links={[{ id: "section-a", text: "Us" },
+          { id: "section-b", text: "Ceremony" },
+          { id: "section-c", text: "Reception" },
+          { id: "section-d", text: "Gifts" },
+          { id: "section-e", text: "RSVP" }
           ]}
         />
-        
-        <div style={{marginTop: "7vh"}}>
-         
+
+        <div style={{ marginTop: "7vh" }}>
+
           <Section text={"About us: " + words} id="section-a" isLeft={true} textBelow={true}>
             <img width={800} height={800} />
           </Section>
@@ -30,21 +30,21 @@ function App() {
           <Section text={"About the ceremony:    " + words} id="section-b" isLeft={false} textBelow={false}>
             <img width={800} height={800} />
           </Section>
-          
+
           <Section text={"About the reception:    " + words} id="section-c" isLeft={true} textBelow={false}>
-          <img width={800} height={800} />
+            <img width={800} height={800} />
           </Section>
 
           <Section text={"About the gifts:    " + words} id="section-d" isLeft={false} textBelow={false}>
-          <img width={800} height={800} />
+            <img width={800} height={800} />
           </Section>
 
           <Section text={"RSVP HERE:     " + words} id="section-e" isLeft={true} textBelow={false}>
-          <img width={800} height={800} />
+            <img width={800} height={800} />
           </Section>
 
           <Section text={""} id="section-f" isLeft={false} textBelow={false}>
-            <div style={{paddingBottom: "600px"}}></div>
+            <div style={{ paddingBottom: "600px" }}></div>
           </Section>
         </div>
       </div>

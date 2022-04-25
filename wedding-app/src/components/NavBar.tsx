@@ -1,4 +1,5 @@
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
+import '../App.css';
 
 interface NavLink{
     id: string,
@@ -62,16 +63,17 @@ export default (props: NavBarProps) => {
 
     return (
         <> 
-            <div ref={ref} style={{position: "fixed", top: "1vh", left: "0", width: "100%"}}>
+            <div ref={ref} style={{position: "fixed", boxShadow: "0 3px 11px 0px #f2f2f2",  left: "0", width: "100%", padding: "10px", background: "white"}}>
            
                 {
                     props.links.map( (x,i) => {
-                        return (<button
-                        style={{padding: "min(2vw, 20px)", marginLeft: i==0?"":"min(2vw, 30px)", fontSize: "min(3vw, 30px)", fontWeight: x.id == active ? "bold" : "normal"}}
+                        return (<span
+                         className="noselect"
+                         style={{padding: "min(2vw, 20px)", marginLeft: i==0?"":"min(2vw, 30px)", fontSize: "min(3vw, 30px)", fontWeight: x.id == active ? "bold" : "normal"}}
                          key={x.id} 
                          onClick={()=>{ScrollTo(x.id, height);}}>
                              {x.text}
-                        </button>)
+                        </span>)
                     })
                 }
 
