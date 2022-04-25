@@ -1,30 +1,14 @@
 import React from 'react';
+import '../App.css';
 
-
-interface SectionProps  {text:string, id: string, isLeft: boolean, textBelow: boolean|null }
+interface SectionProps  {id: string }
 
 export default function Section(props: React.PropsWithChildren<SectionProps>) {
 
-  const textDiv = ( 
-    <div style={{paddingTop: "30px", textAlign: props.isLeft?"left":"right"}}>
-      {props.text}
-    </div>
-  );
-
   return (
-    <div id={props.id} style={{marginBottom: "100px", padding: "5px"}}>
+    <div className="card" id={props.id} >
        {
-           props.textBelow ? (
-                <>
-                    <>{props.children}</>
-                    <>{textDiv}</>
-                </>
-           ) : (
-                <>
-                    <>{textDiv}</>
-                    <>{props.children}</>
-                </>
-           )
+         <>{props.children}</>
        }
         
         <div id={props.id + "_end"}></div>
