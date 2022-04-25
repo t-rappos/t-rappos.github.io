@@ -40,11 +40,11 @@ function App() {
           </Section>
 
           <Section text={"RSVP HERE:     " + words} id="section-e" isLeft={true} textBelow={false}>
-            <img width={800} height={800} />
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfCk8j6b3V31RYWIWF26q0qB3v8UIGGG5kWl__VZUhT2caP-Q/viewform?embedded=true" width="800" height="1710" frameBorder="0" marginHeight={0} marginWidth={0}>Loading…</iframe>
           </Section>
 
           <Section text={""} id="section-f" isLeft={false} textBelow={false}>
-            <div style={{ paddingBottom: "600px" }}></div>
+            <div style={{ paddingBottom: "300px" }}></div>
           </Section>
         </div>
       </div>
