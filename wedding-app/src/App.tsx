@@ -100,8 +100,9 @@ const content = (<>
 
   <Section id="section-c" >
 
-    <div>
-      <img src="/blank.png" alt="image" />
+    <div style={{textAlign: "left"}}>
+      <img src="/Peacock+Lounge+1.jfif" alt="reception" />
+      <h2>Reception</h2>
       <p>{"About the reception:    " + words}</p>
     </div>
 
