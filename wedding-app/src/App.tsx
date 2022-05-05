@@ -2,6 +2,8 @@ import React from 'react';
 import { Desktop, Mobile, NotMobile, Tablet } from './components/Responsive';
 import NavBar from './components/NavBar';
 import Section from './components/Section';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import './App.css';
 import { Gradient } from "./gradient"
 
@@ -36,7 +38,44 @@ const content = (<>
 
   <Section id="section-a">
     <>
-      <img src="/blank.png" alt="image" />
+      <Carousel  showArrows={false} showIndicators={false} showStatus={false} showThumbs={false} autoPlay={true} infiniteLoop={true}  >
+          <div>
+              <img src="/pic01.jpg" />
+          </div>
+          <div>
+              <img src="/pic02.jpg" />
+          </div>
+          <div>
+              <img src="/pic03.jpg" />
+          </div>
+          <div>
+              <img src="/pic04.jpg" />
+          </div>
+          <div>
+              <img src="/pic05.jpg" />
+          </div>
+          <div>
+              <img src="/pic06.jpg" />
+          </div>
+          <div>
+              <img src="/pic07.jpg" />
+          </div>
+          <div>
+              <img src="/pic08.jpg" />
+          </div>
+          <div>
+              <img src="/pic09.jpg" />
+          </div>
+          <div>
+              <img src="/pic10.jpg" />
+          </div>
+          <div>
+              <img src="/pic11.jpg" />
+          </div>
+          <div>
+              <img src="/pic12.jpg" />
+          </div>
+      </Carousel>
       <div style={{textAlign: "left"}}>
         <h2>Our Story</h2>
         <q style={{}}>Love is not something you go out and look for. Love finds you, and when it does, ready or not, it’ll be the best thing to ever happens to you.</q>
@@ -53,14 +92,18 @@ const content = (<>
 
   <Section id="section-b">
     <div style={{textAlign: "left"}}>
-      <img src="/Conservatory-1.jpg" alt="image" />
       <h2>Ceremony</h2>
+      <img src="/Conservatory-1.jpg" alt="image" />
+      <br/>
+      <br/>
       <ul>
         <li>Thursday 18th August 2022</li>
         <li>From 5.30pm</li>
         <li><a href="https://whatson.melbourne.vic.gov.au/things-to-do/the-conservatory" target="_blank">The Conservatory, Fitzroy Gardens.</a></li>
         <li>298 Wellington Parade, East Melbourne VIC 3002</li>
       </ul>
+      <br/>
+      <p>{words}</p>
       <img src="/map1.png" alt="map"/>
       <ul>
         <li>A. Conservatory, Fitzroy Gardens (Ceremony venue).</li>
@@ -95,20 +138,15 @@ const content = (<>
   </Section>
 
   <Section id="section-c" >
-
-    <div style={{textAlign: "left"}}>
-      
+    <div style={{textAlign: "left"}}>      
       <h2>Reception</h2>
+      <img src="/Peacock+Lounge+1.jfif" alt="reception" />
       <ul>
-        <li>Thursday 18th August</li>
-        <li>From 7pm.</li>
-        <li>The Peacock Lounge at The Emerald Peacock</li>
-        <li>Website - <a href="https://www.theemeraldpeacock.com/">The Emerald Peacock | Melbourne Rooftop Bar</a></li>
+        <br/>
+        <li>From 7pm hosted at <a href="https://www.theemeraldpeacock.com/">The Peacock Lounge, The Emerald Peacock</a></li>
         <li>233 Lonsdale St, Melbourne VIC 3000</li>
       </ul>
-
-      <img src="/Peacock+Lounge+1.jfif" alt="reception" />
-
+      <br/>
       <p>We look forward to celebrating with you at our cocktail style wedding reception. Featuring ample comfortable lounge seating, there will be plenty of opportunities for you to rest your feet before taking to the dance floor.</p>
 
       <h3>Transport between Ceremony and Reception venue</h3>
@@ -134,8 +172,8 @@ const content = (<>
 
       <h3>Car Parking:</h3>
       <ul>
-        <li>• Pre-booking offer at 59 Lonsdale Street Car Park <a href="https://www.theemeraldpeacock.com/parking-1">Parking - The Emerald Peacock</a></li>
-        <li>• Wilson Parking at 180 Lonsdale St <a href="https://www.wilsonparking.com.au/parking-locations/victoria/melbourne-cbd/qv-180-lonsdale-street/">QV - 180 Lonsdale St</a></li>
+        <li>• <a href="https://www.theemeraldpeacock.com/parking-1">Pre-booking offer at 59 Lonsdale Street Car Park Parking</a></li>
+        <li>• <a href="https://www.wilsonparking.com.au/parking-locations/victoria/melbourne-cbd/qv-180-lonsdale-street/">Wilson Parking at 180 Lonsdale St QV</a></li>
       </ul>
 
       <h3>Food & Beverages</h3>
@@ -147,9 +185,11 @@ const content = (<>
   </Section>
 
   <Section id="section-d" >
-    <div>
-      <img src="/gift.webp" alt="gifts" />
+    <div style={{textAlign: "left"}}>
       <h2>Gifts</h2>
+      <img src="/gift.webp" alt="gifts" />
+      <br/>
+      <br/>
       <p>Your presence at our wedding is the greatest gift of all.</p>
       <p>However, should you wish to honour us with a gift, a wishing well will be available at the reception for your contribution and best wishes.</p>
       <br/>
@@ -157,16 +197,18 @@ const content = (<>
   </Section>
 
   <Section id="section-1" >
-
-
-    <div>
+    <div style={{textAlign: "left"}}>
       <h2>Maid of Honor: Natalie</h2>
       <img src="/natvicky.jpg" alt="image" />
+      <br/>
+      <br/>
       <p>When Natalie and Vicky first met over 12 years ago, it was friendship at first sight. 
         They have created so many fun memories during this time – many of which include afternoons spent at Arbory Bar enjoying an Aperol Spritz and truffle cheese fries together. 
         Vicky and Tom love Nat for her beautiful heart, kindness and cheeky sense of humour. They feel honoured to have Natalie stand with them on their special day.</p>
       <h2>Best Man: Andrew</h2>
       <img src="/blank.png" alt="image" />
+      <br/>
+      <br/>
       <p>
       {words}
       </p>
@@ -175,33 +217,43 @@ const content = (<>
   </Section>
   
   <Section id="section-2">
-    <div style={{textAlign: "right"}}>
+    <div style={{textAlign: "left"}}>
       <h2>FAQs</h2>
       <ul>
-        <li><strong>1. I’m not from Melbourne, where should I stay?</strong></li>
+        <li><strong>I’m not from Melbourne, where should I stay?</strong></li>
         <li>As both wedding venues are located within the CBD, most hotels in the Melbourne CBD area will be within walking distance. Websites such as booking.com (www.booking.com) have a range of options available.</li>
-        <li><strong>2. What time should I arrive at the ceremony?</strong></li>
+        <br/>
+        <li><strong>What time should I arrive at the ceremony?</strong></li>
         <li>We recommend that you arrive 5 to 10 minutes prior to the ceremony start time (5.30pm). This will allow you to get settled and greet other guests prior to the ceremony.</li>
-        <li><strong>3. What will the weather be like?</strong></li>
+        <br/>
+        <li><strong>What will the weather be like?</strong></li>
         <li>The temperature in Melbourne during August is usually between 7 to 15 degrees Celsius. We suggest a warm coat for moving between the venues. Due to the unpredictable nature of Melbourne weather, a small umbrella may also be useful.</li>
-        <li><strong>4. Can I bring my children?</strong></li>
+        <br/>
+        <li><strong>Can I bring my children?</strong></li>
         <li>While we love your children, unfortunately we are not able to accommodate children at our wedding.</li>
-        <li><strong>5. I’m concerned I may not be comfortable standing for the wedding ceremony. What should I do?</strong></li>
+        <br/>
+        <li><strong>I’m concerned I may not be comfortable standing for the wedding ceremony. What should I do?</strong></li>
         <li>While our ceremony will be a short one, we want all our guests to be comfortable. Please contact us directly to discuss your concerns.</li>
-        <li><strong>6. Are there bathrooms at the ceremony venue?</strong></li>
+        <br/>
+        <li><strong>Are there bathrooms at the ceremony venue?</strong></li>
         <li>Unfortunately there are no bathrooms inside the Fitzroy Gardens Conservatory. The nearest public toilet is located in the gardens on Lansdowne Street. See G on the Map (link up to map).</li>
-        <li><strong>7. Can I take photos or record videos during the wedding?</strong></li>
+        <br/>
+        <li><strong>Can I take photos or record videos during the wedding?</strong></li>
         <li>
           The greatest gift you can give us today is to be truly present, so we respectfully request that you turn off your devices and enjoy our ceremony with us. You are more than welcome to take photos during the reception.
           If you would like to share your photos on social media please use our hashtag #tomandvicky18082022
         </li>
-        <li><strong>8. Do you have a wedding registry?</strong></li>
+        <br/>
+        <li><strong>Do you have a wedding registry?</strong></li>
         <li>Your presence at our wedding is the greatest gift of all. However, should you wish to honour us with a gift, a wishing well will be available at the reception for your contribution and best wishes.</li>
-        <li><strong>9. What time will the reception end?</strong></li>
+        <br/>
+        <li><strong>What time will the reception end?</strong></li>
         <li>We anticipate the formal events (such as cutting the cake) to be completed by 9.30pm. However, the reception venue is licensed until 1am, so we invite you to join us on the dancefloor after the formalities are complete.</li>
-        <li><strong>10. We would like to continue the party, where can we go?</strong></li>
+        <br/>
+        <li><strong>We would like to continue the party, where can we go?</strong></li>
         <li>There are many places in Melbourne that are open late if you would like to continue the fun. We recommend Section 8 (https://section8.com.au/) due to the close proximity to the Emerald Peacock.</li>
-        <li><strong>11. How will you communicate any updated information or changes before the wedding?</strong></li>
+        <br/>
+        <li><strong>How will you communicate any updated information or changes before the wedding?</strong></li>
         <li>Please ensure you leave your contact number and email when you RSVP. While we don’t anticipate any changes, this will allow us to easily contact you if required.</li>
       </ul>
 
@@ -209,9 +261,10 @@ const content = (<>
   </Section>
 
   <Section id="section-e" >
-    
+      <h2>RSVP</h2>
       <br/>
-      <p>Please RSVP by Sunday 26th June 2022. If you have any queries or concerns that are not addressed via the RSVP form, please contact us directly.</p>
+      <p>Please RSVP by <strong>Sunday 26th June 2022</strong>. </p>
+      <p>If you have any queries or concerns that are not addressed via the RSVP form, please contact us directly.</p>
       <br/>
       <br/>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCk8j6b3V31RYWIWF26q0qB3v8UIGGG5kWl__VZUhT2caP-Q/viewform?usp=sf_link" target="_blank">
