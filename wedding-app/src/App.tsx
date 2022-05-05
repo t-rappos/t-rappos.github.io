@@ -104,7 +104,7 @@ const content = (<>
       </ul>
       <br/>
       <p>{words}</p>
-      <img src="/map1.png" alt="map"/>
+      <img src="/map1.png" alt="map" id="map"/>
       <ul>
         <li>A. Conservatory, Fitzroy Gardens (Ceremony venue).</li>
         <li>B. The Emerald Peacock (Reception venue).</li>
@@ -221,7 +221,7 @@ const content = (<>
       <h2>FAQs</h2>
       <ul>
         <li><strong>I’m not from Melbourne, where should I stay?</strong></li>
-        <li>As both wedding venues are located within the CBD, most hotels in the Melbourne CBD area will be within walking distance. Websites such as booking.com (www.booking.com) have a range of options available.</li>
+        <li>As both wedding venues are located within the CBD, most hotels in the Melbourne CBD area will be within walking distance. Websites such as <a href="www.booking.com">booking.com</a> have a range of options available.</li>
         <br/>
         <li><strong>What time should I arrive at the ceremony?</strong></li>
         <li>We recommend that you arrive 5 to 10 minutes prior to the ceremony start time (5.30pm). This will allow you to get settled and greet other guests prior to the ceremony.</li>
@@ -236,7 +236,7 @@ const content = (<>
         <li>While our ceremony will be a short one, we want all our guests to be comfortable. Please contact us directly to discuss your concerns.</li>
         <br/>
         <li><strong>Are there bathrooms at the ceremony venue?</strong></li>
-        <li>Unfortunately there are no bathrooms inside the Fitzroy Gardens Conservatory. The nearest public toilet is located in the gardens on Lansdowne Street. See G on the Map (link up to map).</li>
+        <li>Unfortunately there are no bathrooms inside the Fitzroy Gardens Conservatory. The nearest public toilet is located in the gardens on Lansdowne Street. <a href="#map">See G on the Map</a> </li>
         <br/>
         <li><strong>Can I take photos or record videos during the wedding?</strong></li>
         <li>

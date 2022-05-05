@@ -54,7 +54,7 @@ img {
 }
 
 .myButton {
-	background-color:#9d52ffce;
+	background-color:rgba(116, 87, 150, 0.808);
 	border-radius: 30px;
 	border:0px;
 	display:inline-block;
@@ -78,10 +78,16 @@ img {
   --gradient-color-3: #eae2ff;
   --gradient-color-4: #b9beff;
   */
-  --gradient-color-1: #ebf8e9; 
-  --gradient-color-2: #cccdea; 
-  --gradient-color-3: #f4f0ff;  
-  --gradient-color-4: #ffe8fc;
+  /*
+  --gradient-color-1: rgb(235, 248, 233); 
+  --gradient-color-2: rgb(204, 205, 234); 
+  --gradient-color-3: rgb(244, 240, 255);  
+  --gradient-color-4: rgb(255, 232, 252);
+  */
+  --gradient-color-1: #b5c7de; 
+  --gradient-color-2: #d581ac; 
+  --gradient-color-3: #e0fff2;  
+  --gradient-color-4: #f3dde5;
   position: fixed;
   z-index: -11;
 }
