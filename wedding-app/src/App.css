@@ -107,6 +107,9 @@ blockquote {
   margin-bottom: 20px;
 }
 
+q{
+  font-style: italic;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=PT+Serif&display=swap');
 

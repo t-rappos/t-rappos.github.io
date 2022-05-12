@@ -19,10 +19,10 @@ const navbar = (<NavBar
   links={[{ id: "section-a", text: "Us" },
   { id: "section-b", text: "Ceremony" },
   { id: "section-c", text: "Reception" },
-  { id: "section-d", text: "Gifts" },
   { id: "section-1", text: "Bridal Party" },
+  { id: "section-d", text: "Gifts" },
+  { id: "section-e", text: "RSVP" },
   { id: "section-2", text: "FAQ" },
-  { id: "section-e", text: "RSVP" }
   ]}
 />);
 
@@ -103,7 +103,13 @@ const content = (<>
         <li>298 Wellington Parade, East Melbourne VIC 3002</li>
       </ul>
       <br/>
-      <p>{words}</p>
+      <p>
+      <p>
+        Tom and Vicky look forward to your company as they exchange vows in the Fitzroy Gardens Conservatory. In the intimate space filled with beautiful flowers and plants, and surrounded by their loved ones, Vicky and Tom couldn't imagine a better space to start the next stage of their life together.
+      </p>
+      <p>Due to the unique nature of the venue, Tom and Vicky are holding a standing ceremony. </p>
+      </p>
+      <br/>
       <img src="/map1.png" alt="map" id="map"/>
       <ul>
         <li>A. Conservatory, Fitzroy Gardens (Ceremony venue).</li>
@@ -179,43 +185,95 @@ const content = (<>
       <h3>Food & Beverages</h3>
 
       <p>We invite you to enjoy the many canapes and small bites offered by roving waitstaff. If you have any particular dietary requirements please note this when you RSVP.</p>
-      <p>A hosted bar will be provided to our guests. We encourage our guests to make use of public transport, Taxi/Uber services or designated drivers to make sure everyone has a fun and safe night.</p>
+      <p>A hosted bar will be provided to our guests.</p>
     </div>
 
   </Section>
 
-  <Section id="section-d" >
-    <div style={{textAlign: "left"}}>
-      <h2>Gifts</h2>
-      <img src="/gift.webp" alt="gifts" />
-      <br/>
-      <br/>
-      <p>Your presence at our wedding is the greatest gift of all.</p>
-      <p>However, should you wish to honour us with a gift, a wishing well will be available at the reception for your contribution and best wishes.</p>
-      <br/>
-    </div>
-  </Section>
 
   <Section id="section-1" >
     <div style={{textAlign: "left"}}>
-      <h2>Maid of Honor: Natalie</h2>
+      <h2>Maid of Honor: Natalie Smith</h2>
       <img src="/natvicky.jpg" alt="image" />
       <br/>
       <br/>
       <p>When Natalie and Vicky first met over 12 years ago, it was friendship at first sight. 
         They have created so many fun memories during this time – many of which include afternoons spent at Arbory Bar enjoying an Aperol Spritz and truffle cheese fries together. 
         Vicky and Tom love Nat for her beautiful heart, kindness and cheeky sense of humour. They feel honoured to have Natalie stand with them on their special day.</p>
-      <h2>Best Man: Andrew</h2>
-      <img src="/blank.png" alt="image" />
-      <br/>
-      <br/>
-      <p>
-      {words}
-      </p>
+     
     </div>
 
   </Section>
   
+  
+  <Section id="section-z" >
+    <div style={{textAlign: "left"}}>
+      
+      <h2>Best Man: Andrew Rappos</h2>
+      <img src="/tom_andy.jpg" alt="image" />
+      <br/>
+      <br/>
+      <p>
+      Tom is proud to have Andrew, his younger brother, as his Best Man. Andy and Tom enjoy catching up over a delicious meal and playing video games together. 
+      Despite being the younger sibling, Andy is always there for Tom to rely on. His outgoing bubbly personality perfectly compliments Tom's quiet contemplative character. 
+      Tom looks forward to seeing Andy burst out his dance moves on the reception dancefloor. Vicky and Tom feel blessed to have Andy's support on their special day.
+      </p>
+     
+    </div>
+
+  </Section>
+  
+  
+  <Section id="section-zx" >
+    <div style={{textAlign: "left"}}>
+      <h2>Mother of the Bride: Karen Bolam</h2>
+      <img src="/parents_vicky2.jpg" alt="image" />
+      <q>Mothers hold their daughter's hands for only a short while, but their hearts forever.</q>
+      <br/>
+      <br/>
+      <h2>Father of the Bride: The late Graham Mead</h2>
+      <img src="/parents_vicky1.jpg" alt="image" />
+      <q>A father’s love is forever imprinted on his child’s heart.</q>
+    
+    </div>
+
+  </Section>
+  
+  <Section id="section-zc" >
+    <div style={{textAlign: "left"}}>
+      <h2>Mother & Father of the Groom: Loretta and Peter Rappos</h2>
+      <img src="/parents_tom.jpg" alt="image" />
+      <q>I know that all I will ever need in life is already in my heart, thanks to the two of you.</q>
+    </div>
+
+  </Section>
+
+
+  <Section id="section-d" >
+
+      <h2>Gifts</h2>
+
+      <p>Your presence at our wedding is the greatest gift of all.</p>
+      <p>However, should you wish to honour us with a gift, a wishing well will be available at the reception for your contribution and best wishes.</p>
+      <br/>
+
+  </Section>
+
+  <Section id="section-e" >
+      <h2>RSVP</h2>
+      <br/>
+      <p>Please RSVP by <strong>Sunday 26th June 2022</strong>. </p>
+      <p>If you have any queries or concerns that are not addressed via the RSVP form, please contact us directly.</p>
+      <br/>
+      <br/>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCk8j6b3V31RYWIWF26q0qB3v8UIGGG5kWl__VZUhT2caP-Q/viewform?usp=sf_link" target="_blank">
+        <button className='myButton'>RSVP Here</button>
+      </a>
+      <br/>
+      <br/>
+      <br/> 
+  </Section>
+
   <Section id="section-2">
     <div style={{textAlign: "left"}}>
       <h2>FAQs</h2>
@@ -258,21 +316,6 @@ const content = (<>
       </ul>
 
     </div>
-  </Section>
-
-  <Section id="section-e" >
-      <h2>RSVP</h2>
-      <br/>
-      <p>Please RSVP by <strong>Sunday 26th June 2022</strong>. </p>
-      <p>If you have any queries or concerns that are not addressed via the RSVP form, please contact us directly.</p>
-      <br/>
-      <br/>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCk8j6b3V31RYWIWF26q0qB3v8UIGGG5kWl__VZUhT2caP-Q/viewform?usp=sf_link" target="_blank">
-        <button className='myButton'>RSVP Here</button>
-      </a>
-      <br/>
-      <br/>
-      <br/> 
   </Section>
 
   <div style={{ paddingBottom: "600px" }}>
